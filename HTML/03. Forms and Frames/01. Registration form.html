@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table border="1" cellspacing="0">
+	<tr>
+		<th>Last Name</th>
+		<td><input type="text" /size="30"></td>
+	</tr>
+	<tr>
+		<th>First Name</th>
+		<td><input type="text" size="30"/></td>
+
+	</tr>
+	<tr>
+		<th>Address</th>
+		<td ><textarea></textarea></td>
+	</tr>
+	<tr>
+		<th>City</th>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<input type="text" />
+					</td>
+					<td>State</td>
+					<td><input type="text" size="5" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<th>Zip/Postal Code</th>
+		<td><input type="text" size="10" /></td>
+	</tr>
+	<tr>
+		<th>Country</th>
+		<td>
+			<select name="country">
+  				<option value="Value 1"
+    				selected="selected">Bulgaria</option>
+  				<option value="Value 2">Paris</option>
+ 				<option value="Value 3">Canada</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<th>Phene(country code,<br/>area code, number)</th>
+		<td>
+			<table>
+				<td>
+				(+<input type="tel" size="5">)
+				</td>
+				<td><input type="tel" size="5"></td>
+				<td><input type="tel" size="10"></td>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<th>E-mail</th>
+		<td><input type="email"size="30"></td>
+	</tr>
+	<tr>
+		<th>Birth date</th>
+		<td><input type="date" ></td>
+	</tr>
+	<tr>
+		<th>Gender</th>
+		<td>
+		<select name="gender">
+  			<option value="Value 1"
+    			selected="selected">Male</option>
+  			<option value="Value 2">Female</option>
+  			<option value="Value 3">Other</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<th><span>Starting date</span></th>
+        <td>
+            <input type="radio" id="spring" name="date" />
+            <label for="spring">Spring 2015</label>
+            <input type="radio" id="summer" name="date" />
+            <label for="summer">Summer 2015</label>
+         </td>
+	</tr>
+	<tr>
+		<th>Comments/Questions</th>
+		<td>
+			<textarea rows="4" cols="25"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" bgcolor="skyblue" align="center">
+			<input type="submit" value="Submit"/>
+			<input type="reset" value="Clean this form">
+		</td>
+
+	</tr>
+</table>
+</body>
+</html>

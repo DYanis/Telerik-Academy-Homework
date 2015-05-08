@@ -1,0 +1,23 @@
+img{
+    width:1.4em;
+}
+table tr:first-child{
+    background: limegreen;
+    color:white;
+}
+
+tr:nth-child(3),tr:nth-child(5){
+    background-color: beige;
+}
+
+td{
+    border-left: 1px solid gray;
+    padding: 4px;
+    padding-right: 30px;
+}
+table{
+    border-spacing: 0;
+}
+tr td:first-child{
+    border-left:none;
+}
