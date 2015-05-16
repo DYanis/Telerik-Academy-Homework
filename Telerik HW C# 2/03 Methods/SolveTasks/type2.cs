@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-class AverageOfASequenceOfIntegers
+public static class AverageOfASequenceOfIntegers
 {
-    public double Average(string number)
+    public static double Average(string number)
     {
         double sum = 0;
         foreach (var item in number)

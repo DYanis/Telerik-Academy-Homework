@@ -27,17 +27,14 @@ Press 2 for Calculates the average of a sequence of integers : ");
         {
             Console.WriteLine("Enter number");
             int number = int.Parse(Console.ReadLine());
-            var obb = new ReverseNumber();
-            number = obb.RevertNumber(number);
-            Console.WriteLine(number);
+            Console.WriteLine(ReverseNumber.RevertNumber(number));
         }
 
         if (type == 2)
         {
             Console.WriteLine("Enter number");
             string number = Console.ReadLine();
-            var obb = new AverageOfASequenceOfIntegers();
-            double result  = obb.Average(number);
+            double result  = (AverageOfASequenceOfIntegers.Average(number));
             Console.WriteLine(result);            
         }
     }

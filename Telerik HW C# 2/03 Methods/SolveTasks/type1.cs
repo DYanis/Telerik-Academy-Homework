@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-class ReverseNumber
+static class ReverseNumber
 {
-    public int RevertNumber(int number)
+    public static int RevertNumber(int number)
     {
         string numberStr = Convert.ToString(number);
         string reverseNumberStr = string.Empty;
