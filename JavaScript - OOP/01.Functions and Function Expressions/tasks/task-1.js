@@ -7,23 +7,27 @@
 		throws if any of the elements is not convertible to Number	
 
 */
-
-function sum(arr) {
-	if (arr.length === 0) {
-		return null;
-	}
-	var sum = 0;
-	for (var index = 0; index < arr.length; index+=1) {
-		var element = parseInt(arr[index]);
-		if (isNaN(element)) {
-			throw new Error();
-			return;
-			
-		}
-		sum += element;
-	}
+function solve() {
 	
-	return sum;
+return  function sum(arr) {
+
+		if (arr.length === 0) {
+			return null;
+		}
+		var sum = 0;
+		for (var index = 0; index < arr.length; index+=1) {
+			var element = parseInt(arr[index]);
+			if (isNaN(element)) {
+				throw new Error();
+				return;
+				
+			}
+			sum += element;
+		}
+		
+		return sum;
+		};
 }
+
 
 module.exports = sum;
