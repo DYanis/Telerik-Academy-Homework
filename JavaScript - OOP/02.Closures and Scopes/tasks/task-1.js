@@ -25,24 +25,80 @@ function solve() {
 		var books = [];
 		var categories = [];
 		
-		function addBookToCategory(book) {
-			
+		function ValidateTitleAndCategoryName(params) {
+			if(params.length < 2 || params.length > 100){
+				throw new Error();
+			}
 		}
 		
-		function listBooks() {
-			return books;
+		function ValidateAuthor(author) {
+			if(author === ''){
+				throw new Error();
+			}
+		}
+		
+		function ValidateISBN(isbn){
+			if (isbn === 'undefined' || !(isbn.length === 10 || isbn.length === 13)) {
+				throw new Error();
+			}
+		}
+		
+		function AddCategory(category) {
+			if (!categories.some(function (c) {
+				return c === category;
+			})) {
+				categories.push(category);
+			}
+		}
+		
+		function checkBookInList(newBook){
+			if( books.some(function(book){
+				return book.title === newBook.title || book.isbn === newBook.isbn;
+			})){
+				throw new Error();
+			}
 		}
 
 		function addBook(book) {
+			ValidateTitleAndCategoryName(book.title);
+			ValidateTitleAndCategoryName(book.category);
+			ValidateAuthor(book.author);
+			ValidateISBN(book.isbn);
+			checkBookInList(book);
+			
 			book.ID = books.length + 1;
-			books.push(book);
+			books.push(book);		
+			AddCategory(book.category);
 			return book;
+		}
+		
+		function SortByID(arr) {
+			arr.sort(function (x,y) {
+				if (x.ID > y.ID) {
+					return 1;
+				}else{
+					return -1;
+				}
+			});
 		}
 
 		function listCategories() {
+			SortByID(categories);
 			return categories;
 		}
-
+		
+		function listBooks(by) {
+			var sortedBooks = [];
+			if (!by || !Object.keys(by).length) {
+				sortedBooks = books;
+			} else if(by.hasOwnProperty('category') || by.hasOwnProperty('author')){
+				sortedBooks = books.filter(function(book){
+					return book.category === by.category || book.author === by.author;
+				});
+			}
+			return sortedBooks;
+		}
+		
 		return {
 			books: {
 				list: listBooks,
@@ -55,4 +111,5 @@ function solve() {
 	} ());
 	return library;
 }
+
 module.exports = solve;
