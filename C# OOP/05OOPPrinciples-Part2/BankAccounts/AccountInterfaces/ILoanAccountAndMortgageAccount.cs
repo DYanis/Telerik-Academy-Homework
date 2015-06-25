@@ -2,7 +2,7 @@
 {
     using System;
 
-    interface ILoanAccountAndMortgageAccount
+    public interface ILoanAccountAndMortgageAccount
     {
         void DepositMoney(decimal money);
     }

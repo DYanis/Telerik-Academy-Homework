@@ -1,14 +1,13 @@
 ﻿namespace BankAccounts
 {
-    using BankAccounts.AccountInterfaces;
     using System;
+    using BankAccounts.AccountInterfaces;
 
-    class LoanAccount : Account, ILoanAccountAndMortgageAccount
+   public class LoanAccount : Account, ILoanAccountAndMortgageAccount
     {
         public LoanAccount(Customers customeR, decimal balancE, double interestRatE)
             : base(customeR, balancE, interestRatE)
         {
-
         }
 
         public void DepositMoney(decimal money)

@@ -1,14 +1,13 @@
 ﻿namespace BankAccounts
 {
-    using BankAccounts.AccountInterfaces;
     using System;
+    using BankAccounts.AccountInterfaces;
 
-    class MortgageAccount : Account, ILoanAccountAndMortgageAccount
+   public class MortgageAccount : Account, ILoanAccountAndMortgageAccount
     {
         public MortgageAccount(Customers customeR, decimal balancE, double interestRatE)
             : base(customeR, balancE, interestRatE)
         {
-
         }
 
         public void DepositMoney(decimal money)
@@ -31,14 +30,16 @@
                     decimal first12month = (decimal)(12 * this.interestRate) / 2;
                     return (decimal)(number_of_months * this.interestRate) + first12month;
                 }
-
             }
             else
             {
-                if (number_of_months <= 6) return 0;
+                if (number_of_months <= 6)
+                {
+                    return 0;
+                }
+
                 number_of_months -= 6;
                 return (decimal)(number_of_months * this.interestRate);
-
             }
         }
     }

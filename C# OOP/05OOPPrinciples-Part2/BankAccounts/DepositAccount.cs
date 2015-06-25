@@ -1,13 +1,13 @@
-﻿using BankAccounts.AccountInterfaces;
-namespace BankAccounts
+﻿namespace BankAccounts
 {
     using System;
+    using BankAccounts.AccountInterfaces;
 
-    class DepositAccount : Account ,IDepositAcc
+    public class DepositAccount : Account, IDepositAcc
     {
-        public DepositAccount(Customers customeR, decimal balancE, double interestRatE):base(customeR,balancE,interestRatE)
+        public DepositAccount(Customers customeR, decimal balancE, double interestRatE)
+            : base(customeR, balancE, interestRatE)
         {
-
         }
 
         public void DepositMoney(decimal money)
@@ -27,7 +27,9 @@ namespace BankAccounts
                 return 0;
             }
             else
+            {
                 return (decimal)(number_of_months * this.interestRate);
+            }
         }
     }
 }

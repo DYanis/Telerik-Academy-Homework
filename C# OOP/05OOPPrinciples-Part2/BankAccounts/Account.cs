@@ -10,13 +10,19 @@
 
         protected double interestRate;
 
-        public decimal Balance { get { return this.balace; } }
-
         public Account(Customers customeR, decimal balancE, double interestRatE)
         {
             this.customer = customeR;
             this.balace = balancE;
             this.interestRate = interestRatE;
+        }
+
+        public decimal Balance
+        {
+            get
+            {
+                return this.balace;
+            }
         }
 
         public abstract decimal CalculateInterest(int number_of_months);  

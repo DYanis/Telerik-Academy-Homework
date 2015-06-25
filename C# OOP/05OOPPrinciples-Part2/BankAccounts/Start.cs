@@ -2,9 +2,9 @@
 {
     using System;
 
-    class Start
+   public class Start
     {
-        static void Main()
+       public static void Main()
         {
             var depositAcount = new DepositAccount(Customers.individual, 11500, 3);
             Console.WriteLine(depositAcount.Balance);
