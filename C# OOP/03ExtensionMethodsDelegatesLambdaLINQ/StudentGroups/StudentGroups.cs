@@ -79,9 +79,9 @@
             // Problem 15 
 
             var lessMeaningless = students.Where(x => x.FN.ToString().Substring(3, 2) == "06").Select(x => x.FirstName + " " + x.LastName);
-            foreach (var item in lessMeaningless) 
-            { 
-                Console.WriteLine(item); 
+            foreach (var item in lessMeaningless)
+            {
+                Console.WriteLine(item);
             }
 
             // Problem 18
@@ -103,7 +103,7 @@
             // Problem 19 
 
             var extractByGroupe = students.GroupBy(x => x.GroupNumber);
-            
+
             foreach (var group in studentsFromGroupTwo.ToArray())
             {
                 Console.WriteLine("Group number: " + group.Key);
@@ -131,6 +131,6 @@
                 text += list[i] + ", ";
             }
             return text;
-        }    
+        }
     }
 }
