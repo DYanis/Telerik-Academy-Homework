@@ -8,7 +8,6 @@
         public Dog(int age, string name, bool isMale)
             : base(age, name, isMale)
         {
-
         }
 
         public override void MakeSound()

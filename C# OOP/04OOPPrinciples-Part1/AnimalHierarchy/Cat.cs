@@ -3,12 +3,11 @@
     using System;
     using System.Linq;
 
-    class Cat : Animals
+    internal class Cat : Animals
     {
         public Cat(int age, string name, bool isMale)
             : base(age, name, isMale)
         {
-
         }
 
         public override void MakeSound()

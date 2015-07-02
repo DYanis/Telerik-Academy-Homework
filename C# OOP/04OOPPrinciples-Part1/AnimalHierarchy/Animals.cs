@@ -5,12 +5,6 @@
 
     public abstract class Animals : ISound
     {
-        public int Age { get; set; }
-
-        public string Name { get; set; }
-
-        public bool IsMale { get; protected set; }
-
         public Animals(int age, string name, bool isMale)
         {
             this.Age = age;
@@ -18,19 +12,31 @@
             this.IsMale = isMale;
         }
 
+        public int Age { get; set; }
+
+        public string Name { get; set; }
+
+        public bool IsMale { get; protected set; }
+
+        public static void AverageAge(Animals[] arr)
+        {
+            var groupedAnimalsByType = arr.GroupBy(x => x.GetType());
+            foreach (var group in groupedAnimalsByType)
+            {
+                Console.Write(group.Key.Name + " - ");
+                int averageForGroupAge = 0;
+                foreach (var animal in group)
+                {
+                    averageForGroupAge += animal.Age;
+                }
+
+                Console.WriteLine(averageForGroupAge / group.Count());
+            }
+        }
+
         public virtual void MakeSound()
         {
             Console.WriteLine("I'm a anymal");
-        }
-
-        public static double AverageAge(Animals[] arr)
-        {
-            double totalAge = 0;
-            foreach (var item in arr)
-            {
-                totalAge += item.Age;
-            }
-            return totalAge / arr.Length;
         }
     }
 }

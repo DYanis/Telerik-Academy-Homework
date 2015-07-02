@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    class Kitten : Cat
+    internal class Kitten : Cat
     {
         public Kitten(int age, string name, bool isMale)
             : base(age, name, isMale)
