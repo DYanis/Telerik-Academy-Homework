@@ -36,7 +36,7 @@
 
         public virtual void MakeSound()
         {
-            Console.WriteLine("I'm a anymal");
+            Console.WriteLine("I'm a animal");
         }
     }
 }
