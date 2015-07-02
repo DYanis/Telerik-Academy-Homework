@@ -23,7 +23,7 @@
             var groupedAnimalsByType = arr.GroupBy(x => x.GetType());
             foreach (var group in groupedAnimalsByType)
             {
-                Console.Write(group.Key.Name + " - ");
+                Console.Write(group.Key.Name + "-");
                 int averageForGroupAge = 0;
                 foreach (var animal in group)
                 {
