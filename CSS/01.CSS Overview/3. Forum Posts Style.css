@@ -1,0 +1,28 @@
+body{
+    background-color: gray;
+}
+h1{
+    color:white;
+}
+body>header h1:first-child{
+    text-align: center;
+}
+
+li a{
+    color:white;
+    text-decoration: none;
+}
+p a {
+    text-decoration: none;
+    color: black;
+}
+ul {
+    text-align: center;
+    color:gray;
+}
+nav>ul>li:last-child{
+    text-decoration: underline white;
+}
+body>footer:last-child{
+    text-align: center;
+}
